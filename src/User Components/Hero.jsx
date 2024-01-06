@@ -1,15 +1,21 @@
 import React from 'react'
-
+import './StyledComponents/wave.css'
+import styled from 'styled-components'
+import Wave from './Wave'
 const Hero = () => {
 
-  const maxwit = {
-    maxWidth: '100%'
-  }
+  const HeroDiv = styled.div`
+    height:100vh; 
+    background-color: black;
+    position: relative;
+
+  `
+  
   return (
-    <div style={{height: '120vh'}}>
-        <img style={maxwit} src='https://source.unsplash.com/random/1024x768
-' alt="" />
-    </div>
+    <HeroDiv>
+
+<Wave/>
+    </HeroDiv>
   )
 }
 

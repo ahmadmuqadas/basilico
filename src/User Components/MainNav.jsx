@@ -15,7 +15,8 @@ const StaticNav = styled.div`
   align-items: center;
   position: relative;
   padding: 0rem 1rem;
-  background-color: ${props => props.scrollPosition > 52 ? '#f2f3f5' : ''};
+  background-color: ${props => props.scrollPosition > 52 ? '#FFFFFF' : ''};
+  transition: all  ease .5s;
 `
 const NavUl = styled.ul`
 display: flex;
@@ -30,7 +31,8 @@ max-height: ${props => props.isToggleOpen ? '50rem' : '0'};
 padding: ${props => props.isToggleOpen ? '' : '0'};
   overflow: hidden;
   transition: all ease 0.5s;
-  background-color: #f2f3f5;
+  background-color: #FFFFFF;
+  transition: all  ease .5s;
 `
 const NavLi = styled.li`
 padding-left: 1rem;
@@ -44,14 +46,15 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
 `
 const LogoP = styled.p`
   font-size: 2.5rem;
-  color: ${props => props.scrollPosition > 52 ? 'black' : '#f2f3f5'};
+  color: ${props => props.scrollPosition > 52 ? 'black' : '#FFFFFF'};
+  transition: all  ease .5s;
 
 `
 
 
 const MenuIcon = styled.div`
     cursor: pointer;
-    width: 30px;
+    width: 20px;
     height: 18px;
     display: flex;
     flex-direction: column;
@@ -67,7 +70,7 @@ const MenuIcon = styled.div`
 const Line = styled.div`
     height: 2px;
     width: 100%;
-    background-color: ${props => props.scrollPosition > 52 ? 'black' : '#f2f3f5'};;
+    background-color: ${props => props.scrollPosition > 52 ? 'black' : '#FFFFFF'};;
     transition: all 0.31s ease;
 `;
 
