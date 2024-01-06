@@ -68,7 +68,7 @@ const Line = styled.div`
     height: 2px;
     width: 100%;
     background-color: ${props => props.scrollPosition > 52 ? 'black' : '#f2f3f5'};;
-    transition: all 0.3s ease;
+    transition: all 0.31s ease;
 `;
 
 
