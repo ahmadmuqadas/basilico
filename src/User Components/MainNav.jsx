@@ -6,7 +6,7 @@ position: fixed;
 top: 0;
 right: 0;
 left: 0;
-z-index: 1;
+z-index: 99;
   
 `
 const StaticNav = styled.div`
@@ -17,6 +17,7 @@ const StaticNav = styled.div`
   padding: 0rem 1rem;
   background-color: ${props => props.scrollPosition > 52 ? '#FFFFFF' : ''};
   transition: all  ease .5s;
+  z-index: 4;
 `
 const NavUl = styled.ul`
 display: flex;
