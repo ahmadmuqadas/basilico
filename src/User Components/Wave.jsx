@@ -13,7 +13,7 @@ const Wave = () => {
         pointerEvents: "none",
         bottom: '-1rem',
         zIndex: '2',
-        display: 'none'
+      
 
         
          
