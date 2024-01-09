@@ -23,10 +23,10 @@ const Wave = () => {
                      <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
                  </defs>
                  <g className="wavies">
-                     <use xlinkHref="#gentle-wave" x="10" y="0" fill="#ffffff5b"/>
-                     <use xlinkHref="#gentle-wave" x="15" y="1" fill="#e5e5e5ae"/>
-                     <use xlinkHref="#gentle-wave" x="20" y="1" fill="#ffffff57"/>
-                     <use xlinkHref="#gentle-wave" x="25" y="3" fill="white"/>  
+                     <use xlinkHref="#gentle-wave" x="10" y="0" fill="#ffffff33"/>
+                     <use xlinkHref="#gentle-wave" x="15" y="0" fill="#e5e5e577"/>
+                     <use xlinkHref="#gentle-wave" x="20" y="0" fill="#ffffff57"/>
+                     <use xlinkHref="#gentle-wave" x="25" y="0" fill="#ffffffcd"/>  
                  </g>
              </svg>
          </div>
