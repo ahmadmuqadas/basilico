@@ -24,9 +24,9 @@ const Wave = () => {
                  </defs>
                  <g className="wavies">
                      <use xlinkHref="#gentle-wave" x="10" y="0" fill="#ffffff33"/>
-                     <use xlinkHref="#gentle-wave" x="15" y="0" fill="#e5e5e577"/>
-                     <use xlinkHref="#gentle-wave" x="20" y="0" fill="#ffffff57"/>
-                     <use xlinkHref="#gentle-wave" x="25" y="0" fill="#ffffffcd"/>  
+                     <use xlinkHref="#gentle-wave" x="15" y="0" fill="#e5e5e51e"/>
+                     <use xlinkHref="#gentle-wave" x="20" y="0" fill="#ffffff1f"/>
+                     <use xlinkHref="#gentle-wave" x="25" y="0" fill="#ffffffb7"/>  
                  </g>
              </svg>
          </div>

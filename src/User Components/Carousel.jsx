@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import styled from 'styled-components';
@@ -6,7 +6,7 @@ import backgroundOne from '../Media/backgroundone.jpg'
 import backgroundTwo from '../Media/backgroundTwo.jpg'
 import backgroundThree from '../Media/backgroundThree.mp4'
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
-
+import CarouselNav from './CrouselNav'
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -18,70 +18,57 @@ import 'swiper/css/autoplay';
 
 const StyledSwiper = styled(Swiper)`
    position: relative;
-   width: 95%;
-   margin-top: 2rem;
-`;
+   /* display: flex; */
+   
+ 
+`
+
 
 const StyledSwiperSlide = styled(SwiperSlide)`
-   background-image: url(${props => props.backgroundImage});
+  background-image: url(${props => props.backgroundImage});
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  color: #FFFF;
+  color: #FFFFFF; // Corrected color code
   position: relative;
   transition: all ease-in-out 1s;
-  transition-delay: 1.2s;
   background-repeat: no-repeat;
- background-size: cover;
- background-position: center;
+  background-size: cover;
+  background-position: center;
 
-
-
-
-  h1 {
-    opacity: 0;
-    transition: all ease 0.8s;
-    transition-delay: 2s;
-  }
-
-  h4 {
-    opacity: 0;
-    transition: all ease 0.8s;
-    transition-delay: 2s;
-  }
-
-  &.swiper-slide-active h4 {
-      opacity: 1;
-      transition: all ease 0.6s;
-    transition-delay: 1.8s;
-    }
-
-   
-    &.swiper-slide-active {
-      /* background-size: 100%; */
-    }
-    &.swiper-slide-active h1 {
-      opacity: 1;
-      
-    }
-
-    &.swiper-slide-active div {
-      background-color: #00000053;
-    }
-
-    @media (min-width: 600px) {
-   background-size: 130% 130%;
-   transition-duration: 2s;
-
-   &.swiper-slide-active {
-    background-size: 100% 100%;
-  }
-  }
-
+  // Combined media query
+  @media (min-width: 600px) {
+    border: solid white ${props => props.scrollPosition >= 54 ? '0' : '2rem'};
+    border-bottom: none;
+    background-size: 120% 120%;
+    transition: border 0.2s ease-in-out, background-size ease-in-out 1s;
+    transition-delay: .1s, 1s
   
-`
+  }
+
+  h1, h4 {
+    opacity: 0;
+    transition: all ease 0.8s;
+    transition-delay: 2s;
+  }
+
+  &.swiper-slide-active h1, &.swiper-slide-active h4 {
+    opacity: 1;
+    transition: all ease 0.6s;
+    transition-delay: 1.8s;
+  }
+
+  &.swiper-slide-active div {
+    background-color: #00000053; // Corrected opacity in hex color
+  }
+
+  &.swiper-slide-active {
+    // Uncomment or adjust as needed
+     background-size: 100% 100%;
+  }
+`;
 
 
 
@@ -140,33 +127,55 @@ const Carousel = () => {
   //   setSwiperIndex(swiper.activeIndex)
   // };
 
+
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+    };
+}, []);
+
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+};
+
+
+
+
   return (
     <>
+    
        <StyledSwiper
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         spaceBetween={0}
         slidesPerView={1}
         speed={2000}
         autoplay={{delay: 3000}}
-        scrollbar={{ draggable: true }}
+        
         // onSlideChange={handleSlideChange}
-
     >
      
-      <StyledSwiperSlide backgroundImage={backgroundOne}>
+   
+      <StyledSwiperSlide   scrollPosition={scrollPosition}  backgroundImage={backgroundOne}>
+    
 <Overly></Overly>
-<CarouselSubHeader>IMAGE CAPTION #4</CarouselSubHeader>
+<CarouselSubHeader >IMAGE CAPTION #4</CarouselSubHeader>
 <CarouselHeader>Design is a process.</CarouselHeader>
     
       </StyledSwiperSlide>
 
-       <StyledSwiperSlide backgroundImage={backgroundTwo}>
+       <StyledSwiperSlide   scrollPosition={scrollPosition} backgroundImage={backgroundTwo}>
        <Overly></Overly>
        <CarouselSubHeader>IMAGE CAPTION #4</CarouselSubHeader>
 <CarouselHeader>Design is a process.</CarouselHeader>
       </StyledSwiperSlide>
  
-      <StyledSwiperSlide>
+      <StyledSwiperSlide   scrollPosition={scrollPosition}>
       <Overly></Overly>
       <CrouselVideo autoPlay loop muted playsInline src={backgroundThree} />
        

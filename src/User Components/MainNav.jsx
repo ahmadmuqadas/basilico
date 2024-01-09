@@ -7,6 +7,15 @@ top: 0;
 right: 0;
 left: 0;
 z-index: 99;
+/* border: solid red; */
+
+
+
+@media (min-width: 600px) {
+display: flex;
+/* margin: 3rem 2rem; */
+margin: ${props => props.scrollPosition > 52 ? '0' : '3rem'};
+  }
   
 `
 const StaticNav = styled.div`
@@ -18,6 +27,13 @@ const StaticNav = styled.div`
   background-color: ${props => props.scrollPosition > 52 ? '#FFFFFF' : ''};
   transition: all  ease .5s;
   z-index: 4;
+  /* border: solid yellow; */
+
+  @media (min-width: 600px) {
+   flex-direction: row;
+   width: 100%;
+   
+  }
 `
 const NavUl = styled.ul`
 display: flex;
@@ -34,6 +50,14 @@ padding: ${props => props.isToggleOpen ? '' : '0'};
   transition: all ease 0.5s;
   background-color: #FFFFFF;
   transition: all  ease .5s;
+  @media (min-width: 600px) {
+   padding: 0;
+   flex-direction: row;
+   position: static;
+   background-color: transparent;
+   color: ${props => props.scrollPosition > 52 ? 'black' : '#FFFFFF'};
+  
+  }
 `
 const NavLi = styled.li`
 padding-left: 1rem;
@@ -66,6 +90,11 @@ const MenuIcon = styled.div`
         div:nth-child(2) { opacity: 0; }
         div:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
     `}
+
+    @media (min-width: 600px) {
+ display:none;
+
+  }
 `;
 
 const Line = styled.div`
@@ -87,7 +116,6 @@ const MainNav = () => {
   const [menuStatus, setMenuStatus] = useState('hamburger'); // 'hamburger', 'cross', 'arrow'
   const [scrollPosition, setScrollPosition] = useState(0);
 
-
   const toggleMenu = () => {
     setMenuStatus(menuStatus === 'hamburger' ? 'arrow' : 'hamburger');
     setToggle(prev => !prev)
@@ -106,6 +134,17 @@ const MainNav = () => {
     setScrollPosition(position);
 };
 
+useEffect(() => {
+  const handleResize = () => {
+   setToggle(window.innerWidth > 600 ? true : false)
+  };
+  handleResize()
+  window.addEventListener('resize', handleResize);
+  return () => {
+    window.removeEventListener('resize', handleResize);
+  };
+ 
+}, []);
 
 
 
@@ -113,7 +152,7 @@ const MainNav = () => {
   return (
 
     
-   <StyledHeader>
+   <StyledHeader scrollPosition={scrollPosition}>
  <StaticNav scrollPosition={scrollPosition}>
 <LogoP scrollPosition={scrollPosition}>LOGO</LogoP>
 <MenuIcon status={menuStatus} onClick={toggleMenu}>
