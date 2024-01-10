@@ -8,6 +8,9 @@ right: 0;
 left: 0;
 z-index: 99;
 /* border: solid red; */
+-webkit-box-shadow: 0px 17px 51px -22px rgba(0,0,0,0.9);
+-moz-box-shadow: 0px 17px 51px -22px rgba(0,0,0,0.9);
+box-shadow: 0px 17px 51px -22px rgba(0,0,0,0.9);
 
 
 

@@ -33,7 +33,6 @@ const StyledSwiperSlide = styled(SwiperSlide)`
   flex-direction: column;
   color: #FFFFFF; // Corrected color code
   position: relative;
-  transition: all ease-in-out 1s;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -44,8 +43,12 @@ const StyledSwiperSlide = styled(SwiperSlide)`
     border-bottom: none;
     background-size: 120% 120%;
     transition: border 0.2s ease-in-out, background-size ease-in-out 1s;
-    transition-delay: .1s, 1s
-  
+    transition-delay: .1s, 1s;
+
+    &.swiper-slide-active {
+      // Uncomment or adjust as needed
+      background-size: 100% 100%;
+    }
   }
 
   h1, h4 {
@@ -63,13 +66,7 @@ const StyledSwiperSlide = styled(SwiperSlide)`
   &.swiper-slide-active div {
     background-color: #00000053; // Corrected opacity in hex color
   }
-
-  &.swiper-slide-active {
-    // Uncomment or adjust as needed
-     background-size: 100% 100%;
-  }
-`;
-
+`
 
 
 const CrouselVideo = styled.video`
