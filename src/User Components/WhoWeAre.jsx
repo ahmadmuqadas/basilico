@@ -15,18 +15,20 @@ const PhotosDiv = styled.div`
     justify-content: space-between;
     align-items: center;
     opacity: 0.1;
+    @media (max-width: 1200px) {
+ display:none;
+
+  }
 `;
 
 const PhotoContainerDiv = styled.div`
 display: flex;
 align-items: center;
 justify-content: space-between;
-min-height: 100vh;
 
 `;
 
 const PhotoDiv = styled.div`
-background-color: orange;
 height: 13rem;
 margin: 1rem;
 width: ${props => props.widthSize}; 
@@ -59,7 +61,16 @@ const WhoWeAreElements = styled.div`
     left: 0;
    right: 0;
    display: grid;
+
+ 
    grid-template-columns: 1fr 1fr 1fr 1fr;
+   @media (max-width: 1200px) {
+    position: static;
+    display: flex;
+    flex-direction: column;
+
+
+  }
 `
 
 const TextItem = styled.div`
@@ -68,15 +79,30 @@ const TextItem = styled.div`
     flex-direction:column;
     justify-content: ${props => props.justifyContent};
     align-items: ${props => props.alignItems};
+    @media (max-width: 1200px) {
+    
+
+  }
 
 `
 const TxtOne = styled.h4`
+   /* @media (max-width: 1200px) {
+ margin-top: 4rem;
+
+  } */
 
 `
 
 const TextTwo = styled.h2`
 margin-top: 3rem;
-font-size: 4rem;
+font-size: 4em;
+text-align: center;
+@media (max-width: 600px) {
+
+    font-size: 2.5rem;
+
+  }
+
 
 `
 
@@ -86,21 +112,47 @@ font-size: 1.5rem;
 padding: 0 4rem;
 color: #6b6b6b;
 font-weight: bolder;
+   @media (max-width: 600px) {
+    padding: 0;
+
+  }
 `
 
 const TextFour = styled.h4`
 padding: 0 4rem;
-margin-bottom: 3rem;
+margin-bottom: 3rem; 
+font-size: 1.4rem;
+ @media (max-width: 1200px) {
+ margin-top: 2rem;
+
+
+  }
+
+  @media (max-width: 600px) {
+ margin-top: 2rem;
+ padding: 0;
+
+  }
 `
 
 const TextFive = styled.p`
 padding: 0 4rem;
+line-height: 1.5rem;
+font-size: 1.5;
+@media (max-width: 1200px) {
+ margin-top: 4rem;
+ padding: 1;
+
+
+  }
+
+  @media (max-width: 600px) {
+ margin-top: 4rem;
+ padding: 0;
+
+  }
 `
 
-const TextSix = styled.h4`
-margin-bottom: 3rem;`
-
-const TextSeven = styled.p``
 
 
 const WhoWeAre = () => {
@@ -118,8 +170,8 @@ const WhoWeAre = () => {
 <TextFive>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</TextFive>
           </TextItem>
           <TextItem gridCol={'3/6'} justifyContent={'center'}>
-          <TextSix>BRAND MISSION</TextSix>
-<TextSeven>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</TextSeven>
+          <TextFour>BRAND MISSION</TextFour>
+<TextFive>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</TextFive>
           </TextItem>
         </WhoWeAreElements>
         <PhotosDiv>
