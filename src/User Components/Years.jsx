@@ -2,14 +2,17 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 
 const YearWrapperDiv = styled.div`
-    min-height: 80vh;
     display: flex;
     flex-direction: column;
     position: relative;
+    @media (min-width: 600px) {
+
+}
 `
 const YearsDiv = styled.div`
     background-color: ${props => props.bgColor};
     flex-grow: 1;
+    padding: 10rem;
 `
 
 

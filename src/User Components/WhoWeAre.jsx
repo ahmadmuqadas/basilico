@@ -8,13 +8,14 @@ padding-right: 2rem;
 position: relative;
 
 
+
 `;
 
 const PhotosDiv = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    opacity: 0.1;
+    opacity: 0.2;
     @media (max-width: 1200px) {
  display:none;
 
@@ -26,9 +27,11 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 
+
 `;
 
 const PhotoDiv = styled.div`
+
 height: 13rem;
 margin: 1rem;
 width: ${props => props.widthSize}; 
@@ -42,6 +45,7 @@ const PhotoItemOneDiv = styled.div`
 display: flex;
 flex-direction: column;
 /* gap: 1rem; */
+
 `;
 
 const PhotoItemTwoDiv = styled.div``;
@@ -61,7 +65,8 @@ const WhoWeAreElements = styled.div`
     left: 0;
    right: 0;
    display: grid;
-
+   max-width: 1600px;
+   margin: auto;
  
    grid-template-columns: 1fr 1fr 1fr 1fr;
    @media (max-width: 1200px) {
@@ -78,7 +83,9 @@ const TextItem = styled.div`
     display: flex;
     flex-direction:column;
     justify-content: ${props => props.justifyContent};
+    text-align: center;
     align-items: ${props => props.alignItems};
+    
     @media (max-width: 1200px) {
     
 
