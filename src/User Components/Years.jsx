@@ -57,25 +57,28 @@ const Years = () => {
     }, []);
 
     function handleScroll() {
-        const position = window.pageYOffset;
-       
+      const position = window.pageYOffset;
     
-        if (position > 1000 && !intervalId) {
-          const newIntervalId = setInterval(() => {
-            setNumberIncrease(prevNumber => {
-              if (prevNumber >= 76) {
-                clearInterval(newIntervalId);
-                setIntervalId(null); // Reset the intervalId
-                return prevNumber;
-              }
-              return prevNumber + 1;
-            });
-          }, 100);
+      if (position > 1000 && !intervalId) {
+        const newIntervalId = setInterval(() => {
+          setNumberIncrease(prevNumber => {
+            if (prevNumber >= 76) {
+              clearInterval(newIntervalId);
+              setIntervalId(null); // Reset the intervalId
+              return prevNumber;
+            }
+            return prevNumber + 1;
+          });
+        }, 100);
     
-          setIntervalId(newIntervalId);
-        }
+        setIntervalId(newIntervalId);
+      } else if (position <= 1000 && intervalId) {
+        // Clear the interval if position is less than or equal to 1000
+        clearInterval(intervalId);
+        setIntervalId(null);
+      }
+    }
     
-        }
        
   return (
     <YearWrapperDiv>

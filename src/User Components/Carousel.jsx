@@ -168,7 +168,6 @@ const Carousel = () => {
         </StyledSwiperSlide>
 
         <StyledSwiperSlide scrollPosition={scrollPosition}>
-          {/* <Overly></Overly> */}
           <CrouselVideo autoPlay loop muted playsInline src={backgroundThree} />
         </StyledSwiperSlide>
       </StyledSwiper>
