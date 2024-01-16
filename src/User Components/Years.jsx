@@ -5,6 +5,8 @@ const YearWrapperDiv = styled.div`
     display: flex;
     flex-direction: column;
     position: relative;
+    width: 95%;
+    margin: auto;
     @media (min-width: 600px) {
 
 }

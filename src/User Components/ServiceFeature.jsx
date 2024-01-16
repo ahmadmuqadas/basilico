@@ -32,8 +32,9 @@ const ServiceItem = styled.div`
 const ServiceImg = styled.img`
   width: 100%;
   height: 100%;
-  max-height: 80vh;
+/* needs to be fixed */
   object-fit: cover;
+
 `;
 
 const Service = styled.div`
@@ -59,11 +60,18 @@ const ServiceTxt = styled.div`
 const ServiceTitle = styled.p``;
 const ServicePercentage = styled.p``;
 
-const StyledSwiperSlide = styled(SwiperSlide)``;
+const StyledSwiperSlide = styled(SwiperSlide)`
+height: 80vh;
+
+@media  (max-width: 1000px){
+  height: 50vh;
+}
+`;
 
 const StyledSwiper = styled(Swiper)`
   width: 100%;
-  height: 100%;
+
+
 
   @media (max-width: 800px) {
     height: 40%;

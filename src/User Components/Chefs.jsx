@@ -16,6 +16,8 @@ const ChefsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   background-color: #f7f7f7;
+  width: 95%;
+  margin: auto;
 `;
 
 const ChefsTxtDiv = styled.div`
