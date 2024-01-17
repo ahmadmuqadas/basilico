@@ -17,7 +17,7 @@ box-shadow: 0px 17px 51px -22px rgba(0,0,0,0.9);
 @media (min-width: 600px) {
 display: flex;
 /* margin: 3rem 2rem; */
-margin: ${props => props.scrollPosition > 52 ? '0' : '3rem'};
+margin: ${props => props.scrollposition > 52 ? '0' : '3rem'};
   }
   
 `
@@ -27,7 +27,7 @@ const StaticNav = styled.div`
   align-items: center;
   position: relative;
   padding: 0rem 1rem;
-  background-color: ${props => props.scrollPosition > 52 ? '#FFFFFF' : ''};
+  background-color: ${props => props.scrollposition > 52 ? '#FFFFFF' : ''};
   transition: all  ease .5s;
   z-index: 4;
   /* border: solid yellow; */
@@ -42,8 +42,8 @@ const NavUl = styled.ul`
 display: flex;
 flex-direction: column;
 padding-top: 1rem;
-left: ${props => props.scrollPosition > 52 ? '0' : '1rem'};
-right: ${props => props.scrollPosition > 52 ? '0' : '1rem'};
+left: ${props => props.scrollposition > 52 ? '0' : '1rem'};
+right: ${props => props.scrollposition > 52 ? '0' : '1rem'};
 list-style-type: none;
 position: absolute;
 top: 100%;
@@ -58,7 +58,7 @@ padding: ${props => props.isToggleOpen ? '' : '0'};
    flex-direction: row;
    position: static;
    background-color: transparent;
-   color: ${props => props.scrollPosition > 52 ? 'black' : '#FFFFFF'};
+   color: ${props => props.scrollposition > 52 ? 'black' : '#FFFFFF'};
   
   }
 `
@@ -74,7 +74,7 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
 `
 const LogoP = styled.p`
   font-size: 2.5rem;
-  color: ${props => props.scrollPosition > 52 ? 'black' : '#FFFFFF'};
+  color: ${props => props.scrollposition > 52 ? 'black' : '#FFFFFF'};
   transition: all  ease .5s;
 
 `
@@ -103,7 +103,7 @@ const MenuIcon = styled.div`
 const Line = styled.div`
     height: 2px;
     width: 100%;
-    background-color: ${props => props.scrollPosition > 52 ? 'black' : '#FFFFFF'};;
+    background-color: ${props => props.scrollposition > 52 ? 'black' : '#FFFFFF'};;
     transition: all 0.31s ease;
 `;
 
@@ -117,7 +117,7 @@ const Line = styled.div`
 const MainNav = () => {
   const [toggle, setToggle] = useState(false);
   const [menuStatus, setMenuStatus] = useState('hamburger'); // 'hamburger', 'cross', 'arrow'
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const [scrollposition, setscrollposition] = useState(0);
 
   const toggleMenu = () => {
     setMenuStatus(menuStatus === 'hamburger' ? 'arrow' : 'hamburger');
@@ -134,7 +134,7 @@ const MainNav = () => {
 
   const handleScroll = () => {
     const position = window.pageYOffset;
-    setScrollPosition(position);
+    setscrollposition(position);
 };
 
 useEffect(() => {
@@ -155,15 +155,15 @@ useEffect(() => {
   return (
 
     
-   <StyledHeader scrollPosition={scrollPosition}>
- <StaticNav scrollPosition={scrollPosition}>
-<LogoP scrollPosition={scrollPosition}>LOGO</LogoP>
+   <StyledHeader scrollposition={scrollposition}>
+ <StaticNav scrollposition={scrollposition}>
+<LogoP scrollposition={scrollposition}>LOGO</LogoP>
 <MenuIcon status={menuStatus} onClick={toggleMenu}>
-            <Line scrollPosition={scrollPosition} className="line" />
-            <Line scrollPosition={scrollPosition} className="line" />
-            <Line scrollPosition={scrollPosition} className="line" />
+            <Line scrollposition={scrollposition} className="line" />
+            <Line scrollposition={scrollposition} className="line" />
+            <Line scrollposition={scrollposition} className="line" />
         </MenuIcon>
-<NavUl scrollPosition={scrollPosition} isToggleOpen={toggle}>
+<NavUl scrollposition={scrollposition} isToggleOpen={toggle}>
   <NavLi>HOME</NavLi>
   <NavLi>ABOUT</NavLi>
   <NavLi>SERVICES</NavLi>

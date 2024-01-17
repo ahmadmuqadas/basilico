@@ -29,6 +29,11 @@ const MenuCatagoryUl = styled.ul`
 const MenuCatagoryLi = styled.li`
   font-weight: bold;
   cursor: pointer;
+
+&:hover {
+  color: #E5C27B;
+  transition: all ease .3s;
+}
 `;
 
 const FoodsDiv = styled.div`
@@ -38,14 +43,22 @@ const FoodsDiv = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 1rem;
+
+  @media (max-width: 1270px) {
+    justify-content: space-evenly;
+   
+  }
 `;
 
 const FoodDetails = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  min-width: 49%;
+  min-width: 360px;
   max-width: 49%;
+  justify-content: center;
+  border-bottom: dotted black 1px;
+  
   /* border: solid black; */
   padding: 1rem;
 
@@ -55,6 +68,7 @@ const FoodName = styled.p`
   grid-column: 1/2;
   grid-row: 1/1;
 padding: 1rem 0;
+font-weight: bold;
 `;
 
 const FoodPrice = styled.p`
@@ -62,11 +76,13 @@ const FoodPrice = styled.p`
   grid-row: 1/1;
   text-align: end;
   padding: 1rem 0;
+  font-weight: bold;
 `;
 
 const FoodDescription = styled.p`
   grid-column: 1/4;
   grid-row: 2/2;
+  color: #6b6b6b;
 `;
 
 const Menu = () => {

@@ -39,7 +39,7 @@ const StyledSwiperSlide = styled(SwiperSlide)`
   // Combined media query
   @media (min-width: 600px) {
     border: solid white
-      ${(props) => (props.scrollPosition >= 54 ? "0" : "2rem")};
+      ${(props) => (props.scrollposition >= 54 ? "0" : "2rem")};
     border-bottom: none;
     background-size: 120% 120%;
     transition: border 0.2s ease-in-out, background-size ease-in-out 1s;
@@ -123,7 +123,7 @@ const Carousel = () => {
   //   setSwiperIndex(swiper.activeIndex)
   // };
 
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const [scrollposition, setscrollposition] = useState(0);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -135,7 +135,7 @@ const Carousel = () => {
 
   const handleScroll = () => {
     const position = window.pageYOffset;
-    setScrollPosition(position);
+    setscrollposition(position);
   };
 
   return (
@@ -150,7 +150,7 @@ const Carousel = () => {
         // onSlideChange={handleSlideChange}
       >
         <StyledSwiperSlide
-          scrollPosition={scrollPosition}
+          scrollposition={scrollposition}
           backgroundImage={backgroundOne}
         >
           <Overly></Overly>
@@ -159,7 +159,7 @@ const Carousel = () => {
         </StyledSwiperSlide>
 
         <StyledSwiperSlide
-          scrollPosition={scrollPosition}
+          scrollposition={scrollposition}
           backgroundImage={backgroundTwo}
         >
           <Overly></Overly>
@@ -167,7 +167,7 @@ const Carousel = () => {
           <CarouselHeader>Design is a process.</CarouselHeader>
         </StyledSwiperSlide>
 
-        <StyledSwiperSlide scrollPosition={scrollPosition}>
+        <StyledSwiperSlide scrollposition={scrollposition}>
           <CrouselVideo autoPlay loop muted playsInline src={backgroundThree} />
         </StyledSwiperSlide>
       </StyledSwiper>
