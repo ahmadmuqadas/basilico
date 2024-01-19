@@ -27,9 +27,6 @@ const CarouselLi = styled.li`
 const CrouselNav = () => {
   return (
     <CarouselDiv>
-
-        {/* LOGO */}
-
         <CarouselUl>
 
             <CarouselLi>HOME</CarouselLi>

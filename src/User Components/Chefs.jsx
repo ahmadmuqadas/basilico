@@ -4,6 +4,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import facebookICon from '../Media/facebook-app-symbol.png'
 import twitterIcon from '../Media/twitter.png'
 import PintrestIcon from '../Media/pinterest.png'
+import chefOne from '../Media/wwa4.jpg'
+import chefTwo from '../Media/wwa6.jpg'
+import chefThree from '../Media/chef.jpg'
+import chefFour from '../Media/chef2.jpg'
+import chefFive from '../Media/chefthree.jpg'
 import {
   Navigation,
   Pagination,
@@ -18,6 +23,7 @@ const ChefsWrapper = styled.div`
   background-color: #f7f7f7;
   width: 95%;
   margin: auto;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 `;
 
 const ChefsTxtDiv = styled.div`
@@ -169,7 +175,7 @@ const chefsData = [
     fbProfile: 'https://www.facebook.com/',
     twitterProfile: 'https://www.facebook.com/',
     pinterestProfile: 'https://www.pinterest.com/',
-    chefImage: 'https://source.unsplash.com/random/?dark'
+    chefImage: chefOne,
     
   },
 
@@ -179,7 +185,7 @@ const chefsData = [
     fbProfile: 'https://www.facebook.com/',
     twitterProfile: 'https://www.facebook.com/',
     pinterestProfile: 'https://www.pinterest.com/',
-    chefImage: 'https://source.unsplash.com/random/?dark'
+    chefImage: chefTwo,
     
   },
 
@@ -190,7 +196,7 @@ const chefsData = [
     fbProfile: 'https://www.facebook.com/',
     twitterProfile: 'https://www.facebook.com/',
     pinterestProfile: 'https://www.pinterest.com/',
-    chefImage: 'https://source.unsplash.com/random/?dark'
+    chefImage: chefThree
     
   },
 
@@ -201,7 +207,7 @@ const chefsData = [
     fbProfile: 'https://www.facebook.com/',
     twitterProfile: 'https://www.facebook.com/',
     pinterestProfile: 'https://www.pinterest.com/',
-    chefImage: 'https://source.unsplash.com/random/?dark'
+    chefImage: chefFour,
     
   },
 
@@ -214,7 +220,7 @@ const chefsData = [
     fbProfile: 'https://www.facebook.com/',
     twitterProfile: 'https://www.facebook.com/',
     pinterestProfile: 'https://www.pinterest.com/',
-    chefImage: 'https://source.unsplash.com/random/?dark'
+    chefImage: chefFive,
     
   },
 

@@ -9,6 +9,9 @@ import {
   A11y,
   Autoplay,
 } from "swiper/modules";
+import foodImageOne from '../Media/foodimgone.jpg'
+import foodImageTwo from '../Media/foodImageTwo (1).jpg'
+import fooodImageThree from '../Media/foodimageThree.jpg'
 
 const ServiceFeatureWrapperDiv = styled.div`
   display: flex;
@@ -89,15 +92,15 @@ const ServiceFeature = () => {
         navigation
       >
         <StyledSwiperSlide>
-          <ServiceImg src="https://source.unsplash.com/random/?dark" />
+          <ServiceImg src={foodImageOne} />
         </StyledSwiperSlide>
 
         <StyledSwiperSlide>
-          <ServiceImg src="https://source.unsplash.com/random/?white" />
+          <ServiceImg src={foodImageTwo} />
         </StyledSwiperSlide>
 
         <StyledSwiperSlide>
-          <ServiceImg src="https://source.unsplash.com/random/?green" />
+          <ServiceImg src={fooodImageThree} />
         </StyledSwiperSlide>
         <Wave />
       </StyledSwiper>

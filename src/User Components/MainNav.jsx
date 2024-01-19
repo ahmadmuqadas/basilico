@@ -69,6 +69,9 @@ padding-bottom: 0.6rem;
 font-size: .8rem;
 font-weight: 600;
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+&:hover {
+  cursor: pointer;
+}
 
   
 `
@@ -166,12 +169,11 @@ useEffect(() => {
         </MenuIcon>
 <NavUl scrollposition={scrollposition} isToggleOpen={toggle}>
   <NavLi>HOME</NavLi>
-  <NavLi>ABOUT</NavLi>
+  <NavLi>CHEFS</NavLi>
   <NavLi>SERVICES</NavLi>
-  <NavLi>MENU</NavLi>
-  <NavLi>INSIDE</NavLi>
-  <NavLi>INSIDE</NavLi>
   <NavLi>CONTACT</NavLi>
+  <NavLi>ADMIN</NavLi>
+
 </NavUl>
  </StaticNav>
    </StyledHeader>

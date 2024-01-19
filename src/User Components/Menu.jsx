@@ -11,6 +11,7 @@ const MenuWrapper = styled.div`
   padding-top: 8rem;
   width: 95%;
   margin: auto;
+  font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
 `;
 
 const MenuTitle = styled.p`

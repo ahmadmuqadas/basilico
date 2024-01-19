@@ -15,6 +15,7 @@ const ContactWrapperDiv = styled.div`
   margin: auto;
   position: relative;
   color: white;
+  font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
 `;
 
 const Overlay = styled.div`

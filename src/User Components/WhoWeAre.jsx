@@ -1,11 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
+import wwa1 from '../Media/wwa1.jpg'
+import wwa2 from '../Media/wwa2.jpg'
+import wwa3 from '../Media/wwa3.jpg'
+import wwa4 from '../Media/wwa4.jpg'
+import wwa5 from '../Media/wwa5.jpg'
+import wwa6 from '../Media/wwa6.jpg'
+import wwa7 from '../Media/wwa7.jpg'
+import wwa8 from '../Media/wwa8.jpg'
+import wwa9 from '../Media/wwa9.jpg'
+import wwa10 from '../Media/wwa10.jpg'
+import wwa11 from '../Media/wwa11.jpg'
+import wwa12 from '../Media/wwa12.jpg'
 
 const WrapperDiv = styled.div`
 padding-top: 5rem;
 padding-left: 2rem;
 padding-right: 2rem;
 position: relative;
+font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
 
 
 
@@ -186,52 +199,40 @@ Basilico Restaurant offers a delightful dining experience with a menu blending f
         <PhotosDiv>
             <PhotoContainerDiv>
                 <PhotoItemOneDiv>
-                <PhotoDiv borderNone={0} widthSize={'6rem'}><PhotosImg src='https://source.unsplash.com/random/800x600
-'/></PhotoDiv>
-                <PhotoDiv borderNone={0} widthSize={'6rem'}><PhotosImg src='https://source.unsplash.com/random/800x600
-'/></PhotoDiv>
-                <PhotoDiv borderNone={0} widthSize={'6rem'}><PhotosImg src='https://source.unsplash.com/random/800x600
-'/></PhotoDiv>
+                <PhotoDiv borderNone={0} widthSize={'6rem'}><PhotosImg src={wwa1}/></PhotoDiv>
+                <PhotoDiv borderNone={0} widthSize={'6rem'}><PhotosImg src={wwa2}/></PhotoDiv>
+                <PhotoDiv borderNone={0} widthSize={'6rem'}><PhotosImg src={wwa3}/></PhotoDiv>
                 </PhotoItemOneDiv>
 
                 <PhotoItemTwoDiv>
-                <PhotoDiv widthSize={'10rem'}><PhotosImg src='https://source.unsplash.com/random/800x600
-'/></PhotoDiv>
-                <PhotoDiv widthSize={'10rem'}><PhotosImg src='https://source.unsplash.com/random/800x600
-'/></PhotoDiv>
+                <PhotoDiv widthSize={'10rem'}><PhotosImg src={wwa4}/></PhotoDiv>
+                <PhotoDiv widthSize={'10rem'}><PhotosImg src={wwa5}/></PhotoDiv>
                
                 </PhotoItemTwoDiv>
 
                 <PhotoItemThreeDiv>
-                <PhotoDiv widthSize={'10rem'}><PhotosImg src='https://source.unsplash.com/random/800x600
-'/></PhotoDiv>
+                <PhotoDiv widthSize={'10rem'}><PhotosImg src={wwa6}/></PhotoDiv>
                 </PhotoItemThreeDiv>
                
             </PhotoContainerDiv>
             <PhotoContainerDiv>
 
             <PhotoItemOneDiv>
-            <PhotoDiv widthSize={'10rem'}><PhotosImg src='https://source.unsplash.com/random/800x600
-'/></PhotoDiv>
+            <PhotoDiv widthSize={'10rem'}><PhotosImg src={wwa7}/></PhotoDiv>
                 
                 </PhotoItemOneDiv>
 
                 <PhotoItemTwoDiv>
-                <PhotoDiv widthSize={'10rem'}><PhotosImg src='https://source.unsplash.com/random/800x600
-'/></PhotoDiv>
-                <PhotoDiv widthSize={'10rem'}><PhotosImg src='https://source.unsplash.com/random/800x600
-'/></PhotoDiv>
+                <PhotoDiv widthSize={'10rem'}><PhotosImg src={wwa8}/></PhotoDiv>
+                <PhotoDiv widthSize={'10rem'}><PhotosImg src={wwa9}/></PhotoDiv>
                
                 </PhotoItemTwoDiv>
 
                 <PhotoItemThreeDiv>
 
-                <PhotoDiv borderNone={0} widthSize={'6rem'}><PhotosImg src='https://source.unsplash.com/random/800x600
-'/></PhotoDiv>
-                <PhotoDiv borderNone={0} widthSize={'6rem'}><PhotosImg src='https://source.unsplash.com/random/800x600
-'/></PhotoDiv>
-                <PhotoDiv borderNone={0} widthSize={'6rem'}><PhotosImg src='https://source.unsplash.com/random/800x600
-'/></PhotoDiv>
+                <PhotoDiv borderNone={0} widthSize={'6rem'}><PhotosImg src={wwa10}/></PhotoDiv>
+                <PhotoDiv borderNone={0} widthSize={'6rem'}><PhotosImg src={wwa11}/></PhotoDiv>
+                <PhotoDiv borderNone={0} widthSize={'6rem'}><PhotosImg src={wwa12}/></PhotoDiv>
 
 
                 </PhotoItemThreeDiv>
