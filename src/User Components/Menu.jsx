@@ -87,14 +87,21 @@ const FoodDescription = styled.p`
 
 const Menu = () => {
   const [menuData, setMenuData] = useState();
-  const [callFoodCategory, setcallFoodCategory] = useState();
+  const [callFoodCategory, setCallFoodCategory] = useState();
+
+
+
+
 
   // Sad path should be applied here!
   useEffect(() => {
     const menuRef = ref(db);
+
     function handleSnapshot(snapshot) {
       const data = snapshot.val();
       setMenuData(data);
+   // the intail value in callFoodCategory is defined because the menu should be displayed on first render:
+      setCallFoodCategory(data[0]?.FoodsItem || []);
     }
 
     const menuListener = onValue(menuRef, handleSnapshot);
@@ -102,20 +109,22 @@ const Menu = () => {
     return () => {
       menuListener();
     };
-  }, []); 
+  }, []);
 
-  const renderMenuCatagory =
-    menuData &&
-    menuData.map((data) => {
-      return (
-        <MenuCatagoryLi
-          key={data.FoodCatagoryId}
-          onClick={() => setcallFoodCategory(data.FoodsItem)}
-        >
-          {data.FoodCatagoryName}
-        </MenuCatagoryLi>
-      );
-    });
+
+
+  const renderMenuCatagory = menuData &&
+  menuData.map((data) => {
+    return (
+      <MenuCatagoryLi
+        key={data.FoodCatagoryId}
+        onClick={() => setCallFoodCategory(data.FoodsItem)}
+      >
+        {data.FoodCatagoryName}
+      </MenuCatagoryLi>
+    );
+  });
+
 
 
   const RenderFood =
@@ -142,3 +151,4 @@ const Menu = () => {
 };
 
 export default Menu;
+ 

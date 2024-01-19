@@ -3,6 +3,9 @@ import styled from "styled-components";
 import backgroundImg from "../Media/backgroundone.jpg";
 import Wave from "./Wave";
 import { Form } from "react-router-dom";
+import pinIcon from '../Media/pin.png';
+import phoneIcon from '../Media/telephone.png'
+import mailIcon from '../Media/mail.png'
 
 const ContactWrapperDiv = styled.div`
   min-height: 120vh;
@@ -53,7 +56,7 @@ const ContactDiv = styled.div`
   padding: 3rem 2rem;
   flex-direction: column;
   line-height: 3rem;
-  @media  (min-width: 500px) {
+  @media  (min-width: 800px) {
     flex-direction: row;
   }
 
@@ -164,8 +167,38 @@ const Close = styled.p`
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 `;
+
+const IconImg = styled.img`
+max-width: 2rem;
+  
+`
+
+const IconTxt = styled.p`
+  
+`
+
+
 const Contact = () => {
   const [toggleForm, setToggleForm] = useState(false);
+  const [formValues, setFormValues] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  }) 
+  
+  function handleChanges(e) {
+    const { name, value } = e.target;
+    setFormValues((prevValues) => ({
+      ...prevValues,
+      [name]: value,
+    }));
+  }
+  function handleFormSubmit(e) {
+    e.preventDefault();
+alert('Cannot send Message because Free version of Firebase does not allow to create more than one database.')
+  }
+  
 
   return (
     <ContactWrapperDiv style={{ backgroundImage: `url(${backgroundImg})` }}>
@@ -174,11 +207,11 @@ const Contact = () => {
           <Subheader>07.LET'S TALK</Subheader>
           <HeaderText>Please Write</HeaderText>
 
-          <FormContainer method="post">
-            <FormInputForName placeholder="Enter Your Name" />
-            <FormInputForEmail placeholder="Enter Your Email" />
-            <FormInputsForSubject placeholder="Enter Your Subject" />
-            <FormInputForMessage placeholder="Enter Your Message" />
+          <FormContainer method="post" onSubmit={handleFormSubmit}>
+            <FormInputForName placeholder="Enter Your Name" name="name" value={formValues.name} onChange={handleChanges} />
+            <FormInputForEmail placeholder="Enter Your Email" name="email" type="email" value={formValues.email} onChange={handleChanges} />
+            <FormInputsForSubject placeholder="Enter Your Subject" name="subject" value={formValues.subject} onChange={handleChanges} />
+            <FormInputForMessage placeholder="Enter Your Message" name="message" value={formValues.message} onChange={handleChanges} />
             <SubmitButton>Submit</SubmitButton>
           </FormContainer>
         </DivOne>
@@ -196,9 +229,18 @@ const Contact = () => {
           <HeaderText>The Contact</HeaderText>
         </DivOne>
         <ContactDiv>
-          <Address>adderess</Address>
-          <Phone>4354363432</Phone>
-          <Email>jldalsd@gmail.com</Email>
+          <Address>
+            <IconImg src={pinIcon}/>
+          <IconTxt>EX INC. TOUCHDOWN DR 1176</IconTxt>
+          </Address>
+          <Phone>
+            <IconImg src={phoneIcon}/>
+           <IconTxt>+12799446949</IconTxt> 
+            </Phone>
+          <Email>
+          <IconImg src={mailIcon}/>
+           <IconTxt>ahmadmuqadas.98@gmail.com</IconTxt> 
+          </Email>
         </ContactDiv>
 
         <DivThree   onClick={() => {

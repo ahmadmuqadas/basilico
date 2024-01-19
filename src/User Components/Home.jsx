@@ -5,6 +5,7 @@ import PlaceHolder from './PlaceHolder'
 import About from './About'
 import Menu from './Menu'
 import Contact from './Contact'
+import Footer from './Footer'
 const Home = () => {
   return (
     <div>
@@ -13,6 +14,7 @@ const Home = () => {
         <About/>
         <Menu/>
         <Contact/>
+        <Footer/>
         
     </div>
   )
