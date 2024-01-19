@@ -28,7 +28,7 @@ const CrouselNav = () => {
   return (
     <CarouselDiv>
 
-        LOGO
+        {/* LOGO */}
 
         <CarouselUl>
 

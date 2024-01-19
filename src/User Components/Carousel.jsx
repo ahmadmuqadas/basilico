@@ -34,7 +34,7 @@ const StyledSwiperSlide = styled(SwiperSlide)`
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: 60% -40%;
 
   // Combined media query
   @media (min-width: 600px) {
@@ -44,7 +44,6 @@ const StyledSwiperSlide = styled(SwiperSlide)`
     background-size: 120% 120%;
     transition: border 0.2s ease-in-out, background-size ease-in-out 1s;
     transition-delay: 0.1s, 1s;
-
     &.swiper-slide-active {
       // Uncomment or adjust as needed
       background-size: 100% 100%;
@@ -71,8 +70,6 @@ const StyledSwiperSlide = styled(SwiperSlide)`
 `;
 
 const CrouselVideo = styled.video`
-  /* width: 100%; */
-
   position: absolute;
   top: 0;
   left: 0;
@@ -81,23 +78,24 @@ const CrouselVideo = styled.video`
   object-fit: cover;
 `;
 
-const DottedSvg = styled.img`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-`;
+
 const CarouselHeader = styled.h1`
   font-size: 3rem;
   text-align: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+    position: ${(props) => (props.position ? 'absolute' : '')};
+    padding-top: ${(props) => (props.position ? '10rem' : 0)}; 
 `;
 
 const CarouselSubHeader = styled.h4`
   margin-bottom: 1rem;
+  font-size: 2rem;
   color: #ffffffca;
+  position: ${(props) => (props.position ? 'absolute' : '')};
+  /* margin-top: ${(props) => (props.position ? '5rem' : 0)}; */
+
+  
 `;
 
 const Overly = styled.div`
@@ -154,8 +152,8 @@ const Carousel = () => {
           backgroundImage={backgroundOne}
         >
           <Overly></Overly>
-          <CarouselSubHeader>IMAGE CAPTION #4</CarouselSubHeader>
-          <CarouselHeader>Design is a process.</CarouselHeader>
+          <CarouselSubHeader>On Time Service</CarouselSubHeader>
+          <CarouselHeader>Experience The Best Service</CarouselHeader>
         </StyledSwiperSlide>
 
         <StyledSwiperSlide
@@ -163,12 +161,16 @@ const Carousel = () => {
           backgroundImage={backgroundTwo}
         >
           <Overly></Overly>
-          <CarouselSubHeader>IMAGE CAPTION #4</CarouselSubHeader>
-          <CarouselHeader>Design is a process.</CarouselHeader>
+          <CarouselSubHeader>Experienced Cooks</CarouselSubHeader>
+          <CarouselHeader>Serving The Most Delicious Food</CarouselHeader>
         </StyledSwiperSlide>
 
         <StyledSwiperSlide scrollposition={scrollposition}>
+        <Overly></Overly>
           <CrouselVideo autoPlay loop muted playsInline src={backgroundThree} />
+          {/* new changes */}
+          <CarouselSubHeader position={'absolute'}>Create Memories</CarouselSubHeader>
+          <CarouselHeader position={'absolute'}>Calm And Lovely Space</CarouselHeader>
         </StyledSwiperSlide>
       </StyledSwiper>
     </>

@@ -168,9 +168,11 @@ const WhoWeAre = () => {
         <WhoWeAreElements>
           <TextItem justifyContent={'center'} alignItems={'center'} gridCol={'1/5'}>
            <TxtOne>01.WHO WE ARE</TxtOne>
-<TextTwo>The Restaurant</TextTwo>
-<TextThree>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
- Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</TextThree>
+<TextTwo>The Basilico</TextTwo>
+<TextThree>
+Basilico Restaurant offers a delightful dining experience with a menu blending fresh,
+ local ingredients in a warm and inviting atmosphere. Discover a fusion of traditional
+  and innovative dishes crafted with care and served with excellence.</TextThree>
           </TextItem>
           <TextItem gridCol={'1/3'} justifyContent={'center'} >
             <TextFour>BRAND MISSION</TextFour>

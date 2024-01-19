@@ -76,6 +76,7 @@ const LogoP = styled.p`
   font-size: 2.5rem;
   color: ${props => props.scrollposition > 52 ? 'black' : '#FFFFFF'};
   transition: all  ease .5s;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 `
 
@@ -157,7 +158,7 @@ useEffect(() => {
     
    <StyledHeader scrollposition={scrollposition}>
  <StaticNav scrollposition={scrollposition}>
-<LogoP scrollposition={scrollposition}>LOGO</LogoP>
+<LogoP scrollposition={scrollposition}>BO</LogoP>
 <MenuIcon status={menuStatus} onClick={toggleMenu}>
             <Line scrollposition={scrollposition} className="line" />
             <Line scrollposition={scrollposition} className="line" />
