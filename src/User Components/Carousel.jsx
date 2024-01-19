@@ -62,6 +62,7 @@ const StyledSwiperSlide = styled(SwiperSlide)`
     opacity: 1;
     transition: all ease 0.6s;
     transition-delay: 1.8s;
+  
   }
 
   &.swiper-slide-active div {
